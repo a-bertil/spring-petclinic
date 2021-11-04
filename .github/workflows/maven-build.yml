@@ -32,5 +32,5 @@ jobs:
       - name: Build and analyze
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}  # Needed to get PR information, if any
-          SONAR_TOKEN: 5b5e2265eb2732053d0470d7ae6a5983d6c09499
+          SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
         run: mvn -B verify org.sonarsource.scanner.maven:sonar-maven-plugin:sonar -Dsonar.projectKey=a-bertil_spring-petclinic -Dsonar.organization=a-bertil -Dsonar.host.url=https://sonarcloud.io
